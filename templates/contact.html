@@ -1,0 +1,61 @@
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+  </head>
+  <body>
+    <h1>Contact</h1>
+  <p>Use this form to message or ask questions. Fields marked * are required.</p>
+
+  <form action="/submit-contact" method="post" enctype="multipart/form-data">
+    <label for="firstName">First name *</label><br />
+    <input id="firstName" name="firstName" type="text" required maxlength="60" /><br /><br />
+
+    <label for="lastName">Last name *</label><br />
+    <input id="lastName" name="lastName" type="text" required maxlength="60" /><br /><br />
+
+    <label for="email">Email address *</label><br />
+    <input id="email" name="email" type="email" required /><br /><br />
+
+    <label for="phone">Phone *</label><br />
+    <input id="phone" name="phone" type="tel" required /><br /><br />
+
+    <label for="dob">Date of birth</label><br />
+    <input id="dob" name="dob" type="date" /><br /><br />
+
+    <label for="reason">Reason for contact *</label><br />
+    <select id="reason" name="reason" required>
+      <option value="">-- Choose --</option>
+      <option value="appointment">Request appointment</option>
+      <option value="prescription">Prescription refill</option>
+      <option value="testresults">Test results</option>
+      <option value="billing">Billing / Insurance</option>
+      <option value="general">General question</option>
+    </select><br /><br />
+
+    <label for="message">Message *</label><br />
+    <textarea id="message" name="message" required maxlength="3000" rows="6" cols="40"
+      placeholder="Describe your symptoms or request."></textarea><br /><br />
+
+    <label for="file">Attach (optional)</label><br />
+    <input id="file" name="file" type="file" accept=".pdf,image/*" /><br /><br />
+
+    <input id="consent" name="consent" type="checkbox" required />
+    <label for="consent">I consent to the clinic contacting me about this enquiry. *</label><br /><br />
+
+    <div style="display:none;">
+      <label>Leave this blank</label>
+      <input name="hp_field" autocomplete="off" />
+    </div>
+
+    <button type="submit">Send request</button>
+  </form>
+
+  <p>For emergencies, please call your local emergency number — do not use this form.</p>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+  </body>
+</html>
